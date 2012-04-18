@@ -13,6 +13,7 @@ use URI::Escape 'uri_escape';
 
 with qw/
     MetaCPAN::API::Author
+    MetaCPAN::API::Autocomplete
     MetaCPAN::API::Module
     MetaCPAN::API::POD
     MetaCPAN::API::Release
