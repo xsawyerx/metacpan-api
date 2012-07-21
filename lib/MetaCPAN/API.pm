@@ -3,7 +3,9 @@ use warnings;
 package MetaCPAN::API;
 # ABSTRACT: A comprehensive, DWIM-featured API to MetaCPAN
 
-use Any::Moose;
+use Moo;
+use MooX::Types::MooseLike::Base qw<Str ArrayRef>;
+use Sub::Quote;
 
 use Carp;
 use JSON;
@@ -25,19 +27,22 @@ with qw/
 
 has base_url => (
     is      => 'ro',
-    isa     => 'Str',
-    default => 'http://api.metacpan.org/v0',
+    isa     => Str,
+    default => sub{'http://api.metacpan.org/v0'},
 );
 
 has ua => (
-    is         => 'ro',
-    isa        => 'HTTP::Tiny',
-    lazy_build => 1,
+    is  => 'lazy',
+    isa => quote_sub(q{
+        use Safe::Isa;
+        $_[0]->$_isa('HTTP::Tiny')
+            or die "$_[0] must be an HTTP::Tiny object"
+    }),
 );
 
 has ua_args => (
     is      => 'ro',
-    isa     => 'ArrayRef',
+    isa     => ArrayRef,
     default => sub {
         my $version = $MetaCPAN::API::VERSION || 'xx';
         return [ agent => "MetaCPAN::API/$version" ];
@@ -46,7 +51,6 @@ has ua_args => (
 
 sub _build_ua {
     my $self = shift;
-
     return HTTP::Tiny->new( @{ $self->ua_args } );
 }
 

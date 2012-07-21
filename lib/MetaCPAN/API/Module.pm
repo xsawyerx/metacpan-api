@@ -4,7 +4,7 @@ package MetaCPAN::API::Module;
 # ABSTRACT: Module information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
 
 # /module/{module}
 sub module {
