@@ -5,6 +5,7 @@ package MetaCPAN::API::Module;
 
 use Carp;
 use Moo::Role;
+use namespace::autoclean;
 
 # /module/{module}
 sub module {

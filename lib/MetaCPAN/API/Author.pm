@@ -5,6 +5,7 @@ package MetaCPAN::API::Author;
 
 use Carp;
 use Moo::Role;
+use namespace::autoclean;
 
 # /author/{author}
 sub author {

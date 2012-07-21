@@ -6,6 +6,7 @@ package MetaCPAN::API;
 use Moo;
 use MooX::Types::MooseLike::Base qw<Str ArrayRef>;
 use Sub::Quote;
+use namespace::autoclean;
 
 use Carp;
 use JSON;
