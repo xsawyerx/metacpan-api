@@ -4,7 +4,8 @@ package MetaCPAN::API::Rating;
 # ABSTRACT: Rating information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
+use namespace::autoclean;
 
 # /rating/{id}
 # /rating/_search

@@ -4,7 +4,8 @@ package MetaCPAN::API::Distribution;
 # ABSTRACT: Distribution information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
+use namespace::autoclean;
 
 # /distribution/{distribution}
 sub distribution {

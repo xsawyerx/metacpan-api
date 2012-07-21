@@ -4,7 +4,8 @@ package MetaCPAN::API::Favorite;
 # ABSTRACT: Favorite ++ information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
+use namespace::autoclean;
 
 # /favorite/_search only
 sub favorite {
