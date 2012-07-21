@@ -4,7 +4,7 @@ package MetaCPAN::API::POD;
 # ABSTRACT: POD information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
 
 # /pod/{module}
 # /pod/{author}/{release}/{path}

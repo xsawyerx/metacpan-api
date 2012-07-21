@@ -4,7 +4,7 @@ package MetaCPAN::API::Author;
 # ABSTRACT: Author information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
 
 # /author/{author}
 sub author {
