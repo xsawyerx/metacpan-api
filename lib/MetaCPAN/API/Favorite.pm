@@ -5,7 +5,7 @@ package MetaCPAN::API::Favorite;
 
 use Carp;
 use Moo::Role;
-use namespace::autoclean;
+use namespace::clean;
 
 # /favorite/_search only
 sub favorite {

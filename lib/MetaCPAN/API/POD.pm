@@ -5,7 +5,7 @@ package MetaCPAN::API::POD;
 
 use Carp;
 use Moo::Role;
-use namespace::autoclean;
+use namespace::clean;
 
 # /pod/{module}
 # /pod/{author}/{release}/{path}

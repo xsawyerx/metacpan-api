@@ -5,7 +5,7 @@ package MetaCPAN::API::Distribution;
 
 use Carp;
 use Moo::Role;
-use namespace::autoclean;
+use namespace::clean;
 
 # /distribution/{distribution}
 sub distribution {

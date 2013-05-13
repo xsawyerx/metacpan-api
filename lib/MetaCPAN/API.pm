@@ -6,13 +6,14 @@ package MetaCPAN::API;
 use Moo;
 use MooX::Types::MooseLike::Base qw<Str ArrayRef InstanceOf>;
 use Sub::Quote;
-use namespace::autoclean;
 
 use Carp;
 use JSON;
 use Try::Tiny;
 use HTTP::Tiny;
 use URI::Escape 'uri_escape';
+
+use namespace::clean;
 
 with qw/
     MetaCPAN::API::Author
