@@ -4,8 +4,7 @@ package MetaCPAN::API;
 # ABSTRACT: A comprehensive, DWIM-featured API to MetaCPAN (DEPRECATED)
 
 use Moo;
-use Types::Standard qw<Str ArrayRef>;
-use Sub::Quote;
+use Types::Standard qw<Str ArrayRef InstanceOf>;
 use namespace::autoclean;
 
 use Carp;
@@ -35,11 +34,7 @@ has base_url => (
 
 has ua => (
     is  => 'lazy',
-    isa => quote_sub(q{
-        use Safe::Isa;
-        $_[0]->$_isa('HTTP::Tiny')
-            or die "$_[0] must be an HTTP::Tiny object"
-    }),
+    isa => InstanceOf['HTTP::Tiny'],
 );
 
 has ua_args => (
