@@ -4,9 +4,8 @@ package MetaCPAN::API;
 # ABSTRACT: A comprehensive, DWIM-featured API to MetaCPAN
 
 use Moo;
-use MooX::Types::MooseLike::Base qw<Str ArrayRef>;
+use MooX::Types::MooseLike::Base qw<Str ArrayRef InstanceOf>;
 use Sub::Quote;
-use namespace::autoclean;
 
 use Carp;
 use JSON;
@@ -14,11 +13,14 @@ use Try::Tiny;
 use HTTP::Tiny;
 use URI::Escape 'uri_escape';
 
+use namespace::clean;
+
 with qw/
     MetaCPAN::API::Author
     MetaCPAN::API::Distribution
     MetaCPAN::API::Favorite
     MetaCPAN::API::File
+    MetaCPAN::API::Autocomplete
     MetaCPAN::API::Module
     MetaCPAN::API::POD
     MetaCPAN::API::Rating
@@ -34,11 +36,7 @@ has base_url => (
 
 has ua => (
     is  => 'lazy',
-    isa => quote_sub(q{
-        use Safe::Isa;
-        $_[0]->$_isa('HTTP::Tiny')
-            or die "$_[0] must be an HTTP::Tiny object"
-    }),
+    isa => InstanceOf['HTTP::Tiny'],
 );
 
 has ua_args => (

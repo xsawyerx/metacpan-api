@@ -5,7 +5,7 @@ package MetaCPAN::API::Source;
 
 use Carp;
 use Moo::Role;
-use namespace::autoclean;
+use namespace::clean;
 
 # /source/{author}/{release}/{path}
 sub source {

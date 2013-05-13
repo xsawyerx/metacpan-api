@@ -5,7 +5,7 @@ package MetaCPAN::API::Release;
 
 use Carp;
 use Moo::Role;
-use namespace::autoclean;
+use namespace::clean;
 
 # /release/{distribution}
 # /release/{author}/{release}
