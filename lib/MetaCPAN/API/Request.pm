@@ -3,7 +3,7 @@ package MetaCPAN::API::Request;
 use Moo;
 use Carp;
 use JSON;
-use ElasticSearch;
+use Elasticsearch;
 use Try::Tiny;
 use HTTP::Tiny;
 use URI::Escape 'uri_escape';
@@ -59,12 +59,11 @@ sub ssearch {
     my $args   = shift;
     my $params = shift;
 
-    my $es = ElasticSearch->new(
-        servers    => 'api.metacpan.org',
-        no_refresh => 1,
+    my $es = Elasticsearch->new(
+        nodes    => [ 'api.metacpan.org:9200' ],
     );
 
-    my $query = $self->_build_query( $args );
+    my $body = $self->_build_body( $args );
 
     my %search_info = (
         search_type => 'scan',
@@ -72,7 +71,7 @@ sub ssearch {
         index       => 'v0',
         type        => $type,
         size        => 1000,
-        query       => $query,
+        body        => $body,
         %{$params},
     );
 
@@ -123,7 +122,7 @@ sub _decode_result {
     return $decoded_result;
 }
 
-sub _build_query {
+sub _build_body {
     my $self = shift;
     my $args = shift;
 
@@ -141,7 +140,7 @@ sub _build_query {
         %query = %{ _build_query_element( $args ) };
     }
 
-    return \%query;
+    return +{ query => \%query };
 }
 
 sub _read_query_key {
