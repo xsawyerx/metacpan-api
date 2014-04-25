@@ -1,5 +1,9 @@
 Revision history for MetaCPAN-API
 
+0.44        25.04.14
+            **** DEPRECATED ****
+            Please use MetaCPAN::Client - new version, rewritten.
+
 0.43        05.04.12
             * Add example in POD of advanced usage with cache by Kent Fredric.
               (Gist: https://gist.github.com/1291928)

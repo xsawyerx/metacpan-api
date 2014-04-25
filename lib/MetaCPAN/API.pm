@@ -140,6 +140,16 @@ sub _build_extra_params {
 
 __END__
 
+=head1 DEPRECATED
+
+B<THIS MODULE IS DEPRECATED, DO NOT USE!>
+
+This module has been completely rewritten to address a multitude
+of problems, and is now available under the new official name:
+L<MetaCPAN::Client>.
+
+Please do not use this module.
+
 =head1 SYNOPSIS
 
     # simple usage

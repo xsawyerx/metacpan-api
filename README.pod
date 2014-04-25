@@ -6,7 +6,7 @@ MetaCPAN::API - A comprehensive, DWIM-featured API to MetaCPAN
 
 =head1 VERSION
 
-version 0.43
+version 0.44
 
 =head1 SYNOPSIS
 
@@ -81,6 +81,16 @@ You can (and should) read up on the generic methods, which will explain how
 their DWIMish nature works, and what searches they run.
 
 =back
+
+=head1 DEPRECATED
+
+B<THIS MODULE IS DEPRECATED, DO NOT USE!>
+
+This module has been completely rewritten to address a multitude
+of problems, and is now available under the new official name:
+L<MetaCPAN::Client>.
+
+Please do not use this module.
 
 =head1 ATTRIBUTES
 
