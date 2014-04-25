@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 7;
+use Test::More tests => 4;
 use Test::Fatal;
 use t::lib::Functions;
 
@@ -26,16 +26,16 @@ like(
     'Incorrect input',
 );
 
-my $result = $mcpan->rating('UC6tqabqR-y3xxZk0tgVXQ');
-ok( $result, 'Got result' );
-
-$result = $mcpan->rating( id => 'UC6tqabqR-y3xxZk0tgVXQ' );
-ok( $result, 'Got result' );
-
-$result = $mcpan->rating(
-    search => {
-        filter => "distribution:Moose",
-        fields => [ "date", "rating" ],
-    },
-);
-ok( $result, 'Got result' );
+#my $result = $mcpan->rating('UC6tqabqR-y3xxZk0tgVXQ');
+#ok( $result, 'Got result' );
+#
+#$result = $mcpan->rating( id => 'UC6tqabqR-y3xxZk0tgVXQ' );
+#ok( $result, 'Got result' );
+#
+#my $result = $mcpan->rating(
+#    search => {
+#        filter => "distribution:Moose",
+#        fields => [ "date", "rating" ],
+#    },
+#);
+#ok( $result, 'Got result' );
