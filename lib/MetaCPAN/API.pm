@@ -4,7 +4,7 @@ package MetaCPAN::API;
 # ABSTRACT: A comprehensive, DWIM-featured API to MetaCPAN (DEPRECATED)
 
 use Moo;
-use MooX::Types::MooseLike::Base qw<Str ArrayRef>;
+use Types::Standard qw<Str ArrayRef>;
 use Sub::Quote;
 use namespace::autoclean;
 
