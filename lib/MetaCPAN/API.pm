@@ -33,7 +33,9 @@ has base_url => (
 );
 
 has ua => (
-    is  => 'lazy',
+    is  => 'ro',
+    lazy => 1,
+    builder => '_build_ua',
     isa => InstanceOf['HTTP::Tiny'],
 );
 
