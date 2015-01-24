@@ -181,8 +181,6 @@ Please do not use this module.
 This was the original hopefully-complete API-compliant interface to MetaCPAN
 (L<https://metacpan.org>).  It has now been superseded by L<MetaCPAN::Client>.
 
-=back
-
 =head1 ATTRIBUTES
 
 =head2 base_url
