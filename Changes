@@ -1,5 +1,11 @@
 Revision history for MetaCPAN-API
 
+0.50        24.01.15
+            * Convert to Moo. (Graham Knop @haarg)
+            * Use Types::Standard. (Graham Knop @haarg)
+            * Remove Module::Build. (Graham Knop @haarg)
+            * Deprecate using x_deprecate meta-data. (Graham Knop @haarg)
+
 0.44        25.04.14
             **** DEPRECATED ****
             Please use MetaCPAN::Client - new version, rewritten.
