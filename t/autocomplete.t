@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 
+use Test::RequiresInternet 'api.metacpan.org' => 80;
 use Test::More tests => 6;
 use Test::Fatal;
 use t::lib::Functions;

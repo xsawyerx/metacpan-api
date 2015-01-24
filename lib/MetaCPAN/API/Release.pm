@@ -4,7 +4,8 @@ package MetaCPAN::API::Release;
 # ABSTRACT: Distribution and releases information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
+use namespace::autoclean;
 
 # /release/{distribution}
 # /release/{author}/{release}

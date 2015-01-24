@@ -4,7 +4,7 @@ package MetaCPAN::API::Autocomplete;
 # ABSTRACT: Autocompletion info for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
 
 # /search/autocomplete?q={search}
 sub autocomplete {

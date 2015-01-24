@@ -4,7 +4,8 @@ package MetaCPAN::API::File;
 # ABSTRACT: File information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
+use namespace::autoclean;
 
 # /module/{module}
 # /file/{author}/{release}/{path}

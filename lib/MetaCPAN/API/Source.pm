@@ -4,7 +4,8 @@ package MetaCPAN::API::Source;
 # ABSTRACT: Source information for MetaCPAN::API
 
 use Carp;
-use Any::Moose 'Role';
+use Moo::Role;
+use namespace::autoclean;
 
 # /source/{author}/{release}/{path}
 sub source {
