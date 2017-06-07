@@ -29,7 +29,7 @@ with qw/
 has base_url => (
     is      => 'ro',
     isa     => Str,
-    default => sub{'http://api.metacpan.org/v0'},
+    default => sub{'https://fastapi.metacpan.org/v1'},
 );
 
 has ua => (
