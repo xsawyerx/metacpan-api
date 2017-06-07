@@ -28,7 +28,7 @@ like(
 
 my $result = $mcpan->favorite(
     search => {
-        user   => "SZABGAB",
+        q => 'distribution:Moose',
         fields => "distribution",
         size   => 100,
     },
