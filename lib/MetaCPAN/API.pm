@@ -8,7 +8,7 @@ use Types::Standard qw<Str ArrayRef InstanceOf>;
 use namespace::autoclean;
 
 use Carp;
-use JSON;
+use JSON::MaybeXS 1.001000;
 use Try::Tiny;
 use HTTP::Tiny 0.014;
 
@@ -47,6 +47,8 @@ has ua_args => (
     },
 );
 
+my $JSON = JSON::MaybeXS->new(canonical => 1, utf8 => 1);
+
 sub _build_ua {
     my $self = shift;
     return HTTP::Tiny->new( @{ $self->ua_args } );
@@ -75,7 +77,7 @@ sub post {
     ref $query and ref $query eq 'HASH'
         or croak 'Second argument of query hashref must be provided';
 
-    my $query_json = to_json( $query, { canonical => 1 } );
+    my $query_json = $JSON->encode( $query );
     my $result     = $self->ua->request(
         'POST',
         "$base/$url",
@@ -111,7 +113,7 @@ sub _decode_result {
     defined ( my $content = $result->{'content'} )
         or croak 'Missing content in return value';
 
-    try   { $decoded_result = decode_json $content }
+    try   { $decoded_result = $JSON->decode( $content ) }
     catch { croak "Couldn't decode '$content': $_" };
 
     return $decoded_result;
@@ -126,7 +128,7 @@ sub _build_extra_params {
 
     # if it's deep, JSON encoding needs to be involved
     if (scalar grep { ref } values %extra) {
-        my $query_json = to_json( \%extra, { canonical => 1 } );
+        my $query_json = $JSON->encode( \%extra );
         %extra = ( source => $query_json );
     }
 
