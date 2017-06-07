@@ -1,9 +1,11 @@
 use strict;
 use warnings;
 
+use lib 't/lib';
 use Test::More tests => 5;
 use Test::Fatal;
-use t::lib::Functions;
+
+use TestFunctions;
 
 my $mcpan = mcpan();
 

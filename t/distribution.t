@@ -1,10 +1,11 @@
 use strict;
 use warnings;
 
+use lib 't/lib';
 use Test::RequiresInternet 'fastapi.metacpan.org' => 443;
 use Test::More tests => 7;
 use Test::Fatal;
-use t::lib::Functions;
+use TestFunctions;
 
 my $mcpan = mcpan();
 
