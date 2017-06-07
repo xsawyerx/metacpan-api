@@ -10,8 +10,7 @@ use namespace::autoclean;
 use Carp;
 use JSON;
 use Try::Tiny;
-use HTTP::Tiny;
-use URI::Escape 'uri_escape';
+use HTTP::Tiny 0.014;
 
 with qw/
     MetaCPAN::API::Author
@@ -131,9 +130,7 @@ sub _build_extra_params {
         %extra = ( source => $query_json );
     }
 
-    my $extra = join '&', map {
-        "$_=" . uri_escape( $extra{$_} )
-    } sort keys %extra;
+    my $extra = $self->ua->www_form_urlencode(\%extra);
 
     return $extra;
 }

@@ -38,7 +38,7 @@ is(
 # throw some symbols in there
 is(
     $mcpan->_build_extra_params( param1 => 'one', param2 => 'two space' ),
-    'param1=one&param2=two%20space',
+    'param1=one&param2=two+space',
     'Escaping HTML in params',
 );
 
