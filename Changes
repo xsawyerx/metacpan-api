@@ -1,6 +1,6 @@
 Revision history for MetaCPAN-API
 
-{{ $NEXT }}
+0.51  2017-06-07
             * switch to v1 API
               - old complex query forms may stop working with new API
             * stop relying on . being in @INC
