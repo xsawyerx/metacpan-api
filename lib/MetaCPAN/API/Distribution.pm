@@ -52,9 +52,9 @@ returning information about the distribution which is not specific to a version
 
 =head1 METHODS
 
-=head2 distibution
+=head2 distribution
 
-    my $result = $mcpan->distibution('DBIx-Class');
+    my $result = $mcpan->distribution('DBIx-Class');
 
 Searches MetaCPAN for a dist.
 

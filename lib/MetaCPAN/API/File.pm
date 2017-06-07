@@ -53,7 +53,7 @@ and distribution releases.
 
 =head1 METHODS
 
-=head2 pod
+=head2 file
 
     my $result = $mcpan->file(
         author  => 'DOY',
