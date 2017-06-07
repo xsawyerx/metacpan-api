@@ -3,7 +3,7 @@ use warnings;
 package MetaCPAN::API::Module;
 # ABSTRACT: Module information for MetaCPAN::API
 
-our $VERSION = '0.51';
+our $VERSION = '0.52';
 
 use Carp;
 use Moo::Role;

@@ -3,7 +3,7 @@ use warnings;
 package MetaCPAN::API;
 # ABSTRACT: A comprehensive, DWIM-featured API to MetaCPAN (DEPRECATED)
 
-our $VERSION = '0.51';
+our $VERSION = '0.52';
 
 use Moo;
 use Types::Standard qw<Str ArrayRef InstanceOf>;
