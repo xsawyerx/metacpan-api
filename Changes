@@ -1,5 +1,7 @@
 Revision history for MetaCPAN-API
 
+{{ $NEXT }}
+
 0.50        24.01.15
             * Convert to Moo. (Graham Knop @haarg)
             * Use Types::Standard. (Graham Knop @haarg)

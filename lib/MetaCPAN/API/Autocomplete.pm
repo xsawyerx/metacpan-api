@@ -3,6 +3,8 @@ use warnings;
 package MetaCPAN::API::Autocomplete;
 # ABSTRACT: Autocompletion info for MetaCPAN::API
 
+our $VERSION = '0.51';
+
 use Carp;
 use Moo::Role;
 

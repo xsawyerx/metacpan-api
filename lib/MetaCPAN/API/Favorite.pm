@@ -3,6 +3,8 @@ use warnings;
 package MetaCPAN::API::Favorite;
 # ABSTRACT: Favorite ++ information for MetaCPAN::API
 
+our $VERSION = '0.51';
+
 use Carp;
 use Moo::Role;
 use namespace::autoclean;
