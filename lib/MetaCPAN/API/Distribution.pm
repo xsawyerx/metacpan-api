@@ -27,7 +27,7 @@ sub distribution {
         } elsif ( defined ( my $search_opts = $opts{'search'} ) ) {
             ref $search_opts && ref $search_opts eq 'HASH'
                 or croak $error;
-    
+
             %extra_opts = %{$search_opts};
             $url        = 'distribution/_search';
         } else {

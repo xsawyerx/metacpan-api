@@ -56,10 +56,10 @@ ratings.
 
     my $result = $mcpan->rating( id => 'UC6tqabqR-y3xxZk0tgVXQ' );
 
-Searches MetaCPAN for CPAN ratings.  
+Searches MetaCPAN for CPAN ratings.
 
 You can do complex searches using 'search' parameter:
-    
+
     my $result = $mcpan->rating(
         search => {
             filter => "distribution:Moose",
