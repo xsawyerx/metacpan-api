@@ -12,7 +12,7 @@ use namespace::autoclean;
 # /author/{author}
 sub author {
     my $self = shift;
-    my ( $pause_id, $url, %extra_opts );
+    my ( $url, %extra_opts );
 
     if ( @_ == 1 ) {
         $url = 'author/' . shift;
@@ -24,8 +24,8 @@ sub author {
         } elsif ( defined $opts{'search'} ) {
             my $search_opts = $opts{'search'};
 
-            ref $search_opts && ref $search_opts eq 'HASH'
-                or croak "'search' key must be hashref";
+            croak "'search' key must be hashref"
+                unless ref $search_opts && ref $search_opts eq 'HASH';
 
             %extra_opts = %{$search_opts};
             $url        = 'author/_search';

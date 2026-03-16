@@ -26,8 +26,8 @@ sub rating {
         if ( defined ( my $id = $opts{'id'} ) ) {
             $url = "rating/$id";
         } elsif ( defined ( my $search_opts = $opts{'search'} ) ) {
-            ref $search_opts && ref $search_opts eq 'HASH'
-                or croak $error;
+            croak $error
+                unless ref $search_opts && ref $search_opts eq 'HASH';
 
             %extra_opts = %{$search_opts};
             $url        = 'rating/_search';

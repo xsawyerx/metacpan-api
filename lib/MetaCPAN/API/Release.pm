@@ -30,8 +30,8 @@ sub release {
       ) {
         $url = "release/$author/$release";
     } elsif ( defined ( my $search_opts = $opts{'search'} ) ) {
-        ref $search_opts && ref $search_opts eq 'HASH'
-            or croak "search option must by a hashref";
+        croak "search option must by a hashref"
+            unless ref $search_opts && ref $search_opts eq 'HASH';
 
         %extra_opts = %{$search_opts};
         $url        = 'release/_search';

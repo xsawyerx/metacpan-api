@@ -18,7 +18,9 @@ sub autocomplete {
     my $size_error = "The size has to be between 0 and 100";
 
     %opts or croak $error;
-    $opts{search} && ref $opts{search} eq 'HASH' or croak $error;
+
+    croak $error
+        unless $opts{search} && ref $opts{search} eq 'HASH';
 
     my %extra_opts;
 
