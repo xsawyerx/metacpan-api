@@ -1,6 +1,10 @@
 Revision history for MetaCPAN-API
 
 {{ $NEXT }}
+  - fix test to work with current MetaCPAN API
+  - revised author tooling and tests
+  - fix error message when release search is given non-hashref
+  - include response content in request errors
 
 0.51      2017-06-07
   - switch to v1 API
