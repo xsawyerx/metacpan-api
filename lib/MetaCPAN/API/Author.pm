@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package MetaCPAN::API::Author;
 
-our $VERSION = '0.52';
+our $VERSION = '0.53';
 
 use Carp;
 use Moo::Role;

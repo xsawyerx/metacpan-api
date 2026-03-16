@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package MetaCPAN::API;
 
-our $VERSION = '0.52';
+our $VERSION = '0.53';
 
 use Moo;
 use Types::Standard qw<Str ArrayRef InstanceOf>;

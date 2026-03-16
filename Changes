@@ -1,5 +1,7 @@
 Revision history for MetaCPAN-API
 
+{{ $NEXT }}
+
 0.52      2026-03-16
   - fix test to work with current MetaCPAN API
   - revised author tooling and tests
