@@ -32,7 +32,7 @@ sub source {
 
     my $result = $self->ua->get($url);
     $result->{'success'}
-        or croak "Failed to fetch '$url': " . $result->{'reason'};
+        or croak "Failed to fetch '$url': $result->{'reason'} - $result->{'content'}";
 
     return $result->{'content'};
 }

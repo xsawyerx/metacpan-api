@@ -107,7 +107,7 @@ sub _decode_result {
         my $reason = $result->{'reason'} || '';
         $reason .= ( defined $original ? " (request: $original)" : '' );
 
-        $success or croak "Failed to fetch '$url': $reason";
+        $success or croak "Failed to fetch '$url': $reason - $result->{content}";
     } else {
         croak 'Missing success in return value';
     }
