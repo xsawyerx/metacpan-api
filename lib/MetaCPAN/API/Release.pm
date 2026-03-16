@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::Release;
-# ABSTRACT: Distribution and releases information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -45,6 +44,10 @@ sub release {
 1;
 
 __END__
+
+=head1 NAME
+
+MetaCPAN::API::Release - Distribution and releases information for MetaCPAN::API
 
 =head1 DESCRIPTION
 

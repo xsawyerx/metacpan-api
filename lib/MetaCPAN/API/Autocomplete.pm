@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::Autocomplete;
-# ABSTRACT: Autocompletion info for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -45,6 +44,12 @@ sub autocomplete {
 
 __END__
 
+=for stopwords autocompletion autocomplete
+
+=head1 NAME
+
+MetaCPAN::API::Autocomplete - Autocompletion info for MetaCPAN::API
+
 =head1 DESCRIPTION
 
 This role provides MetaCPAN::API with fetching autocomplete information
@@ -72,4 +77,3 @@ can also pass C<size>:
 There is a hardcoded limit of 100 results (hardcoded in MetaCPAN).
 
 Searches MetaCPAN for autocompletion info.
-

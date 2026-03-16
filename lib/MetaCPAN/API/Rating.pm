@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::Rating;
-# ABSTRACT: Rating information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -44,6 +43,10 @@ sub rating {
 1;
 
 __END__
+
+=head1 NAME
+
+MetaCPAN::API::Rating - Rating information for MetaCPAN::API
 
 =head1 DESCRIPTION
 

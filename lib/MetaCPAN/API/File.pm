@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::File;
-# ABSTRACT: File information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -46,6 +45,10 @@ sub file {
 
 __END__
 
+=head1 NAME
+
+MetaCPAN::API::File - File information for MetaCPAN::API
+
 =head1 DESCRIPTION
 
 This role provides MetaCPAN::API with fetching file information about modules
@@ -70,7 +73,7 @@ and distribution releases.
     # or
     my $result1 = $mcpan->file('MetaCPAN::API');
     my $result2 = $mcpan->file( id => 'EMfoAvoYhHpUK8MVJSkm4KN5GmY' );
-    
+
 Searches MetaCPAN for a module or a specific release and returns
 file/directory information.  If path is omitted, it gets information
 on the root directory.

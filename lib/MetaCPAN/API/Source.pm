@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::Source;
-# ABSTRACT: Source information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -41,6 +40,10 @@ sub source {
 
 __END__
 
+=head1 NAME
+
+MetaCPAN::API::Source - Source information for MetaCPAN::API
+
 =head1 DESCRIPTION
 
 This role provides MetaCPAN::API with fetching of source files.
@@ -57,15 +60,3 @@ This role provides MetaCPAN::API with fetching of source files.
 
 Searches MetaCPAN for a module or a specific release and returns the plain
 source.
-
-=head1 AUTHOR
-
-  Renee Baecker <module@renee-baecker.de>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2011 by Renee Baecker.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-

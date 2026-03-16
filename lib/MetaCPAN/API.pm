@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API;
-# ABSTRACT: A comprehensive, DWIM-featured API to MetaCPAN (DEPRECATED)
 
 our $VERSION = '0.52';
 
@@ -143,6 +142,10 @@ sub _build_extra_params {
 
 __END__
 
+=head1 NAME
+
+MetaCPAN::API - (DEPRECATED) A comprehensive, DWIM-featured API to MetaCPAN
+
 =head1 DEPRECATED
 
 B<THIS MODULE IS DEPRECATED, DO NOT USE!>
@@ -184,7 +187,7 @@ This was the original hopefully-complete API-compliant interface to MetaCPAN
 
 =head1 ATTRIBUTES
 
-=head2 base_url
+=head2 C<base_url>
 
     my $mcpan = MetaCPAN::API->new(
         base_url => 'http://localhost:9999',
@@ -201,7 +204,7 @@ This attribute is read-only (immutable), meaning that once it's set on
 initialize (via C<new()>), you cannot change it. If you need to, create a
 new instance of MetaCPAN::API. Why is it immutable? Because it's better.
 
-=head2 ua
+=head2 C<ua>
 
 This attribute is used to contain the user agent used for running the REST
 request to the server. It is specifically set to L<HTTP::Tiny>, so if you
@@ -213,7 +216,7 @@ This attribute is read-only (immutable), meaning that once it's set on
 initialize (via C<new()>), you cannot change it. If you need to, create a
 new instance of MetaCPAN::API. Why is it immutable? Because it's better.
 
-=head2 ua_args
+=head2 C<ua_args>
 
     my $mcpan = MetaCPAN::API->new(
         ua_args => [ agent => 'MyAgent' ],
@@ -229,7 +232,7 @@ The default is a user agent string: B<MetaCPAN::API/$version>.
 
 =head1 METHODS
 
-=head2 fetch
+=head2 C<fetch>
 
     my $result = $mcpan->fetch('/release/distribution/Moose');
 
@@ -247,7 +250,7 @@ own extension implementation to MetaCPAN::API.
 
 It accepts an additional hash as C<GET> parameters.
 
-=head2 post
+=head2 C<post>
 
     # /release&content={"query":{"match_all":{}},"filter":{"prefix":{"archive":"Cache-Cache-1.06"}}}
     my $result = $mcpan->post(
@@ -259,4 +262,3 @@ It accepts an additional hash as C<GET> parameters.
     );
 
 The POST equivalent of the C<fetch()> method. It gets the path and JSON request.
-

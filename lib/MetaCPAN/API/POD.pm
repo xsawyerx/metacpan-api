@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::POD;
-# ABSTRACT: POD information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -52,6 +51,10 @@ sub pod {
 1;
 
 __END__
+
+=head1 NAME
+
+MetaCPAN::API::POD - POD information for MetaCPAN::API
 
 =head1 DESCRIPTION
 

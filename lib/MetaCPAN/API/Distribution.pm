@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::Distribution;
-# ABSTRACT: Distribution information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -43,6 +42,10 @@ sub distribution {
 1;
 
 __END__
+
+=head1 NAME
+
+MetaCPAN::API::Distribution - Distribution information for MetaCPAN::API
 
 =head1 DESCRIPTION
 

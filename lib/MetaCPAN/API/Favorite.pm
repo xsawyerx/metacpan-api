@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::Favorite;
-# ABSTRACT: Favorite ++ information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -36,6 +35,10 @@ sub favorite {
 1;
 
 __END__
+
+=head1 NAME
+
+MetaCPAN::API::Favorite - Favorite ++ information for MetaCPAN::API
 
 =head1 DESCRIPTION
 

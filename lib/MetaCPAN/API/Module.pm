@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 package MetaCPAN::API::Module;
-# ABSTRACT: Module information for MetaCPAN::API
 
 our $VERSION = '0.52';
 
@@ -22,6 +21,10 @@ sub module {
 1;
 
 __END__
+
+=head1 NAME
+
+MetaCPAN::API::Module - Module information for MetaCPAN::API
 
 =head1 DESCRIPTION
 
