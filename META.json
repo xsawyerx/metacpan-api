@@ -1,0 +1,146 @@
+{
+   "abstract" : "(DEPRECATED) A comprehensive, DWIM-featured API to MetaCPAN",
+   "author" : [
+      "Sawyer X <xsawyerx@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 6.036, CPAN::Meta::Converter version 2.150012",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : 2
+   },
+   "name" : "MetaCPAN-API",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Changes" : "0.19",
+            "Test::CPAN::Meta" : "0",
+            "Test::EOL" : "0",
+            "Test::Kwalitee" : "1.21",
+            "Test::MinimumVersion" : "0",
+            "Test::Mojibake" : "0",
+            "Test::More" : "0.88",
+            "Test::NoTabs" : "0",
+            "Test::Perl::Critic" : "0",
+            "Test::Pod" : "1.41",
+            "Test::Pod::Coverage::TrustMe" : "0.002001",
+            "Test::Portability::Files" : "0",
+            "Test::Spelling" : "0.17",
+            "Test::Version" : "1"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "HTTP::Tiny" : "0.092",
+            "IO::Socket::SSL" : "0",
+            "JSON::MaybeXS" : "1.001000",
+            "Moo" : "0",
+            "Moo::Role" : "0",
+            "Try::Tiny" : "0",
+            "Types::Standard" : "0",
+            "namespace::autoclean" : "0",
+            "perl" : "5.008001"
+         }
+      },
+      "test" : {
+         "recommends" : {
+            "CPAN::Meta" : "2.120900"
+         },
+         "requires" : {
+            "Exporter" : "0",
+            "ExtUtils::MakeMaker" : "0",
+            "File::Spec" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
+            "Test::Fatal" : "0",
+            "Test::More" : "0",
+            "Test::RequiresInternet" : "0",
+            "Test::TinyMocker" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "MetaCPAN::API" : {
+         "file" : "lib/MetaCPAN/API.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Author" : {
+         "file" : "lib/MetaCPAN/API/Author.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Autocomplete" : {
+         "file" : "lib/MetaCPAN/API/Autocomplete.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Distribution" : {
+         "file" : "lib/MetaCPAN/API/Distribution.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Favorite" : {
+         "file" : "lib/MetaCPAN/API/Favorite.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::File" : {
+         "file" : "lib/MetaCPAN/API/File.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Module" : {
+         "file" : "lib/MetaCPAN/API/Module.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::POD" : {
+         "file" : "lib/MetaCPAN/API/POD.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Rating" : {
+         "file" : "lib/MetaCPAN/API/Rating.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Release" : {
+         "file" : "lib/MetaCPAN/API/Release.pm",
+         "version" : "0.52"
+      },
+      "MetaCPAN::API::Source" : {
+         "file" : "lib/MetaCPAN/API/Source.pm",
+         "version" : "0.52"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/xsawyerx/metacpan-api/issues"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/xsawyerx/metacpan-api.git",
+         "web" : "https://github.com/xsawyerx/metacpan-api"
+      }
+   },
+   "version" : "0.52",
+   "x_contributors" : [
+      "Christian Walde <walde.christian@googlemail.com>",
+      "Graham Knop <haarg@haarg.org>",
+      "Karen Etheridge <ether@cpan.org>",
+      "Logan <loganbell@gmail.com>",
+      "Mickey <mickey75@gmail.com>",
+      "Olaf Alders <olaf@wundersolutions.com>",
+      "reneeb <github@renee-baecker.de>",
+      "SineSwiper <BBYRD@CPAN.org>"
+   ],
+   "x_deprecated" : 1,
+   "x_generated_by_perl" : "v5.40.0",
+   "x_serialization_backend" : "Cpanel::JSON::XS version 4.40",
+   "x_spdx_expression" : "Artistic-1.0-Perl OR GPL-1.0-or-later",
+   "x_static_install" : 1,
+   "x_use_unsafe_inc" : 0
+}
+
